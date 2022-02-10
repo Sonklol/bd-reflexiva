@@ -18,7 +18,7 @@ CREATE TABLE Empleados (
 );
 
 ALTER TABLE Empleados ADD UNIQUE(nombre, priApe);
-ALTER TABLE Empleados ADD CHECK(sueldo<6000);
+ALTER TABLE Empleados ADD CHECK(sueldo<=6000);
 
 ALTER TABLE Empleados MODIFY dni VARCHAR(9) NULL;
 ALTER TABLE Empleados MODIFY priApe VARCHAR(25) NULL;
