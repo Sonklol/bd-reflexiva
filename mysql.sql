@@ -11,7 +11,7 @@ CREATE TABLE Empleados (
     codJefe INT, /* Código del Jefe del Empleado (SI NO TIENE ES NULL)*/
     nombre VARCHAR(20) NOT NULL,
     priApe VARCHAR(25) NOT NULL,
-    sueldo FLOAT NOT NULL CHECK(sueldo>0),
+    sueldo NUMERIC(7, 2) NOT NULL CHECK(sueldo>0),
     dni VARCHAR(9) NOT NULL UNIQUE,
 
     FOREIGN KEY (codJefe) REFERENCES Empleados(codEmpleado) ON DELETE SET NULL /* ON UPDATE CASCADE (NO FUNCIONA PORQUE ES REFLEXIBA)*/
