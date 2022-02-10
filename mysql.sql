@@ -1,6 +1,6 @@
 /*
-Empleados{codEmpleado, nombre,        priApe,        sueldo,                                     dni}
-            P.K           P.K   N.N UNIQUE     N.N UNIQUE    CHECK(sueldo>0 AND sueldo<6000), N.N       UNIQUE N.N
+Empleados{codEmpleado, codJefe   nombre,        priApe,        sueldo,                                     dni}
+            P.K          F.K     N.N UNIQUE     N.N UNIQUE    CHECK(sueldo>0 AND sueldo<6000), N.N       UNIQUE N.N
 */
 
 DROP DATABASE IF EXISTS Ejercicio_Empleados;
