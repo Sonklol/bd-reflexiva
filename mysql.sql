@@ -37,20 +37,20 @@ UPDATE Empleados SET sueldo = sueldo / 2 WHERE sueldo >= 1000 AND sueldo <=1500;
 
 --UPDATE Empleados SET codEmpleado = 215 WHERE nombre = 'Ana'; /* No deja CASCADE DE MISMA FOREIGN KEY en la misma TABLA */ /* Cambiamos Ana en codJefe para todas las claves foraneas tenido ON UPDATE CASCADE*/
 -- ALTERNATIVA
-DELETE FROM Empleados WHERE priApe = 'Garcia' AND nombre = 'Ana';
+DELETE FROM Empleados WHERE dni = '87644565S';
 INSERT INTO Empleados(codEmpleado, codJefe, nombre, priApe, sueldo, dni) VALUES (215, 1, 'Ana', 'Garcia', 4150, '87644565S');
-UPDATE Empleados SET codJefe = 215 WHERE nombre = 'Teresa';
-UPDATE Empleados SET codJefe = 215 WHERE nombre = 'Rodrigo';
+UPDATE Empleados SET codJefe = 215 WHERE dni = '77667563S';
+UPDATE Empleados SET codJefe = 215 WHERE dni = '97565563S';
 
-DELETE FROM Empleados WHERE priApe = 'Martin' AND nombre = 'Teresa';
+DELETE FROM Empleados WHERE dni = '77667563S';
 
 --UPDATE Empleados SET codEmpleado = codEmpleado + 1000; /* No deja CASCADE DE MISMA FOREIGN KEY en la misma TABLA */
 -- ALTERNATIVA
-DELETE FROM Empleados WHERE priApe = 'Garcia' AND nombre = 'Ana' OR priApe = 'Sanchez' AND nombre = 'Jorge';
+DELETE FROM Empleados WHERE dni = '87644565S' OR dni = '76544565S';
 INSERT INTO Empleados(codEmpleado, nombre, priApe, sueldo, dni) VALUES (1001, 'Jorge', 'Sanchez', 5000, '76544565S');
 INSERT INTO Empleados(codEmpleado, codJefe, nombre, priApe, sueldo, dni) VALUES (1215, 1001, 'Ana', 'Garcia', 4150, '87644565S');
-UPDATE Empleados SET codJefe = 1001 WHERE nombre = 'Tomas';
-UPDATE Empleados SET codJefe = 1215 WHERE nombre = 'Rodrigo';
+UPDATE Empleados SET codJefe = 1001 WHERE dni = '87547563S';
+UPDATE Empleados SET codJefe = 1215 WHERE dni = '97565563S';
 
-DELETE FROM Empleados WHERE priApe = 'Garcia' AND nombre = 'Ana';
-UPDATE Empleados SET codJefe = 1001 WHERE nombre = 'Rodrigo';
+DELETE FROM Empleados WHERE dni = '87644565S';
+UPDATE Empleados SET codJefe = 1001 WHERE dni = '97565563S';
