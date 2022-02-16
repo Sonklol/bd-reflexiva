@@ -47,6 +47,7 @@ DELETE FROM Empleados WHERE dni = '77667563S';
 --UPDATE Empleados SET codEmpleado = codEmpleado + 1000; /* No deja CASCADE DE MISMA FOREIGN KEY en la misma TABLA */
 -- ALTERNATIVA
 DELETE FROM Empleados WHERE dni = '87644565S' OR dni = '76544565S';
+UPDATE Empleados SET codEmpleado = codEmpleado + 1000;
 INSERT INTO Empleados(codEmpleado, nombre, priApe, sueldo, dni) VALUES (1001, 'Jorge', 'Sanchez', 5000, '76544565S');
 INSERT INTO Empleados(codEmpleado, codJefe, nombre, priApe, sueldo, dni) VALUES (1215, 1001, 'Ana', 'Garcia', 4150, '87644565S');
 UPDATE Empleados SET codJefe = 1001 WHERE dni = '87547563S';
